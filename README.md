@@ -6,7 +6,7 @@
 
 - 📺 "YouTube":https://www.youtube.com/@loucotrade01
 
--📧 **E-mail**: [jorce_dias@hotmail.com
+-📧 **E-mail**: jorce_dias@hotmail.com
 
 -  ###🔧 Tecnologias e Ferramentas
 
