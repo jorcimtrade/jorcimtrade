@@ -6,7 +6,7 @@
 
 - 📺 "YouTube":https://www.youtube.com/@loucotrade01
 
--📧 **E-mail**: jorce_dias@hotmail.com
+-📧 **E-mail**: [jorce_dias@hotmail.com]
 
 -  ###🔧 Tecnologias e Ferramentas
 
@@ -37,4 +37,12 @@ Confira meus repositórios fixados abaixo! ⬇️
 -🎨 Criação de interfaces modernas e responsivas
 
 -🔧 Integração de APIs e serviços
+
+###📊📊 ESTATISTICAS✔
+
+
+![jorcimtrade GitHub stats](https://github-readme-stats.vercel.app/api?username=jorcimtrade&show_icons=true&theme=radical)
+
+###🤖👾🤖👾🐱‍💻✔✔✔
+
 
