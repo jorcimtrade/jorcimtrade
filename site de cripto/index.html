@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👨🏻‍💻$jorcimcritpo$🤖 Academy - Domine o Mercado Cripto</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #f7931a;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #f7931a;
+            text-shadow: 0 0 20px rgba(247, 147, 26, 0.5);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #f7931a;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 100px 0;
+            text-align: center;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23000" width="1200" height="600"/><path fill="%23f7931a" opacity="0.1" d="M0,300 Q300,200 600,300 T1200,300 L1200,600 L0,600 Z"/></svg>');
+            background-size: cover;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            animation: fadeInDown 1s;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            color: #ddd;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 50px;
+            background: linear-gradient(135deg, #f7931a, #ff6b00);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 10px 30px rgba(247, 147, 26, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(247, 147, 26, 0.6);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 60px;
+            color: #f7931a;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            border: 2px solid rgba(247, 147, 26, 0.3);
+            transition: transform 0.3s, border-color 0.3s;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: #f7931a;
+        }
+
+        .feature-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #f7931a;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 80px 0;
+        }
+
+        .pricing h2 {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 60px;
+            color: #f7931a;
+        }
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            border: 2px solid rgba(247, 147, 26, 0.3);
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .pricing-card.featured {
+            border-color: #f7931a;
+            transform: scale(1.05);
+            box-shadow: 0 20px 60px rgba(247, 147, 26, 0.4);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            border-color: #f7931a;
+        }
+
+        .pricing-card h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #f7931a;
+        }
+
+        .price {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .price-period {
+            color: #aaa;
+            margin-bottom: 30px;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .features-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .features-list li::before {
+            content: "✓ ";
+            color: #f7931a;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Form Section */
+        .contact {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .contact h2 {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 60px;
+            color: #f7931a;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            border: 2px solid rgba(247, 147, 26, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #f7931a;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid rgba(247, 147, 26, 0.3);
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #f7931a;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #f7931a, #ff6b00);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(247, 147, 26, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px 0;
+            text-align: center;
+            border-top: 2px solid #f7931a;
+        }
+
+        footer p {
+            color: #aaa;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Status Message */
+        .status-message {
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 10px;
+            text-align: center;
+            display: none;
+        }
+
+        .status-message.success {
+            background: rgba(76, 175, 80, 0.3);
+            border: 2px solid #4CAF50;
+            color: #4CAF50;
+        }
+
+        .status-message.error {
+            background: rgba(244, 67, 54, 0.3);
+            border: 2px solid #f44336;
+            color: #f44336;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🔐📊👨🏻‍💻jorcimcripto🤖✔📉 </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Início</a></li>
+                <li><a href="#features">Benefícios</a></li>
+                <li><a href="#pricing">Planos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1>Domine o Mercado de Criptomoedas</h1>
+            <p>Aprenda do zero a trader profissional com os melhores especialistas</p>
+            <a href="#pricing" class="cta-button">Começar Agora</a>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Por Que Escolher Nosso Curso?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Conteúdo Completo</h3>
+                    <p>Mais de 100 horas de aulas práticas, desde o básico até estratégias avançadas de trading.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🏫</div>
+                    <h3>Mentoria Exclusiva</h3>
+                    <p>Suporte direto com traders profissionais e sessões de mentoria ao vivo toda semana.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Resultados Reais</h3>
+                    <p>Estratégias testadas e aprovadas no mercado, com cases de sucesso comprovados.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Segurança Total</h3>
+                    <p>Aprenda sobre segurança digital, carteiras e como proteger seus investimentos.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Acesso Vitalício</h3>
+                    <p>Acesse o conteúdo de qualquer lugar, a qualquer hora, em qualquer dispositivo.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3>Certificado</h3>
+                    <p>Receba certificado de conclusão reconhecido no mercado de criptomoedas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Escolha Seu Plano</h2>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Básico</h3>
+                    <div class="price">R$ 497</div>
+                    <div class="price-period">Pagamento único</div>
+                    <ul class="features-list">
+                        <li>Acesso ao curso completo</li>
+                        <li>Aulas gravadas</li>
+                        <li>Material didático em PDF</li>
+                        <li>Grupo exclusivo no Telegram</li>
+                        <li>Certificado de conclusão</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Adquirir Agora</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Premium</h3>
+                    <div class="price">R$ 997</div>
+                    <div class="price-period">Pagamento único</div>
+                    <ul class="features-list">
+                        <li>Tudo do plano Básico</li>
+                        <li>Mentoria semanal ao vivo</li>
+                        <li>Análises de mercado diárias</li>
+                        <li>Sinais de trading</li>
+                        <li>Suporte prioritário</li>
+                        <li>Bônus: E-book avançado</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Adquirir Agora</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>VIP</h3>
+                    <div class="price">R$ 1.997</div>
+                    <div class="price-period">Pagamento único</div>
+                    <ul class="features-list">
+                        <li>Tudo do plano Premium</li>
+                        <li>Mentoria individual (2x/mês)</li>
+                        <li>Acesso sala VIP de traders</li>
+                        <li>Estratégias exclusivas</li>
+                        <li>Robôs de trading gratuitos</li>
+                        <li>Consultoria personalizada</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Adquirir Agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone/WhatsApp</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="plan">Plano de Interesse</label>
+                    <input type="text" id="plan" name="plan" placeholder="Básico, Premium ou VIP">
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Conte-nos sobre suas expectativas..."></textarea>
+                </div>
+                <button type="submit" class="submit-button">Enviar Mensagem</button>
+                <div id="statusMessage" class="status-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CryptoMaster Academy. Todos os direitos reservados.</p>
+            <p>📧 contato@cryptomaster.com | 📱 WhatsApp: (85) 9 9999-9999</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Manipulação do formulário
+        const form = document.getElementById('contactForm');
+        const statusMessage = document.getElementById('statusMessage');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Coletar dados do formulário
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                plan: document.getElementById('plan').value,
+                message: document.getElementById('message').value,
+                date: new Date().toLocaleString('pt-BR')
+            };
+
+            // Armazenar em memória (simulando envio)
+            const contacts = JSON.parse(localStorage.getItem('contacts') || '[]');
+            contacts.push(formData);
+            localStorage.setItem('contacts', JSON.stringify(contacts));
+
+            // Mostrar mensagem de sucesso
+            statusMessage.textContent = '✓ Mensagem enviada com sucesso! Em breve entraremos em contato.';
+            statusMessage.className = 'status-message success';
+            statusMessage.style.display = 'block';
+
+            // Limpar formulário
+            form.reset();
+
+            // Esconder mensagem após 5 segundos
+            setTimeout(() => {
+                statusMessage.style.display = 'none';
+            }, 5000);
+
+            // Aqui você conectaria com seu backend PHP/SQL
+            console.log('Dados do contato:', formData);
+        });
+
+        // Animação ao scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .pricing-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(50px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
