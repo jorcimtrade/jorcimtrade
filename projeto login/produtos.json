@@ -1,0 +1,17 @@
+{
+  "28175b5b-a710-4831-98d0-e404682fcec7": {
+    "codigo": "3020",
+    "nome": "ouro",
+    "descricao": "",
+    "categoria": "Beleza",
+    "preco_compra": 100.0,
+    "preco_venda": 200.0,
+    "estoque": 1,
+    "estoque_minimo": 1,
+    "fornecedor": "louco",
+    "ativo": true,
+    "id": "28175b5b-a710-4831-98d0-e404682fcec7",
+    "criado_em": "2025-09-06T20:15:06.283028",
+    "atualizado_em": "2025-09-06T20:15:06.283219"
+  }
+}
