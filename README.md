@@ -55,6 +55,8 @@ Confira meus repositórios fixados abaixo! ⬇️
 
 ###🤖👾🤖👾🐱‍💻✔✔✔
 
+![snake gif](https://github.com/jorcimtrade/SEU_REPOSITORIO/blob/output/github-contribution-grid-snake.svg)
+
 
 
 
