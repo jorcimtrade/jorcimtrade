@@ -1,0 +1,47 @@
+## ATENÇÃO O CÓDIGO ABAIXO DEVE SER COLADO DENTRO DO MAIN.YML
+
+nome: gerar animação
+
+sobre:
+  # Executar automaticamente a cada 24 horas
+  agendar:
+    - cron: "0 */24 * * *"
+  
+  # Permite executar a tarefa manualmente a qualquer momento.
+  despacho de fluxo de trabalho:
+  
+  # Executar a cada push na branch master
+  empurrar:
+    galhos:
+    - mestre
+    
+
+
+
+empregos:
+  gerar:
+    permissões:
+      Conteúdo: escrever
+    executa em: ubuntu-latest
+    tempo limite em minutos: 5
+    
+    passos:
+      # Gera um jogo da cobrinha a partir do gráfico de contribuições de um usuário do GitHub (<github_user_name>), e gera uma animação SVG em <svg_out_path>
+      - nome: gerar github-contribution-grid-snake.svg
+        utiliza: Platane/snk/svg-only@v3
+        com:
+          github_user_name: ${{ github.repository_owner }}
+          saídas: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+          
+          
+      # enviar o conteúdo de <build_dir> para um branch
+      O conteúdo estará disponível em https://raw.githubusercontent.com/<github_user> /<repository> /<target_branch>/<file> ou como uma página do GitHub.
+      - nome: enviar github-contribution-grid-snake.svg para o branch de saída
+        usa: crazy-max/ghaction-github-pages@v3.1.0
+        com:
+          target_branch: saída
+          diretório_de_compilação: dist
+        ambiente:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
