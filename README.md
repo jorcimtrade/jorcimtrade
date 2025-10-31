@@ -56,7 +56,7 @@ Confira meus repositórios fixados abaixo! ⬇️
 ###🤖👾🤖👾🐱‍💻✔✔✔
 
 
- <img src=" https://raw.githubusercontent.com/jorcimtrade/jorcimtrade/output/snake.svg " alt="Animação de cobra" />
+
 
 
 
