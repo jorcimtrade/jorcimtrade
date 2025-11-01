@@ -1,4 +1,9 @@
 #👨‍💻Olá! 👋 Sou [jorcimtrade.]  🚀 Desenvolvedor Full Stack | Apaixonado pela tecnologia 💡 Me encanta criar soluções inovadoras e aprender coisas novas.   🌍 Baseado na sua cidade/país.]
+/>
+    </a>
+</p>
+
+---
 
 
 ### 📫 Como entrar em contato comigo?
@@ -72,6 +77,14 @@ const jorcimtrade = {
     learning: ["Novas tecnologias", "Melhores práticas"],
     funFact: "Sempre em busca do próximo desafio! 🚀"
 };
+/>
+    </a>
+</p>
+
+---
+
+
+
 
 🌟 Projetos em Destaque
 Confira meus repositórios fixados abaixo! ⬇️
